@@ -1,0 +1,8 @@
+BLOG NEW
+
+<%= form_for @blog, url: {action: "create"}, html: {class: "blog-form"} do |f| %>
+<%= f.hidden_field :user_id, :value => current_user.id %>
+<%= f.text_field :title %>
+<%= f.text_area :content %>
+<%= f.submit "Create" %>
+<% end %>

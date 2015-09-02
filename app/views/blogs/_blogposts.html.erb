@@ -1,0 +1,16 @@
+<div class="blog-two-item">
+  <div class="blog-two-img">
+    <!-- Image -->
+   
+  </div>
+  <div class="blog-two-content">
+    <h3><%= link_to post.title, blog_path(post.id) %></h3>
+    <div class="blog-meta">
+      <!-- Date -->
+      <a href="#"><i class="fa fa-calendar"></i> &nbsp; 24.3.2014</a> &nbsp; 
+    </div>
+    <p>
+    <%= post.content %>
+    </p>
+  </div>
+</div>

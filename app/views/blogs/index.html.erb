@@ -1,0 +1,21 @@
+<div class="page-heading-two">
+  <div class="container">
+    <h2>My Blog <span></span></h2>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="blog-two">
+    <div class="row">
+      <div class="col-md-4">
+        <%= render :partial => "sidebar.html.erb" %>
+      </div>
+      <div class="col-md-8">
+        <% @blog_posts.each do |post| %>
+          <%= render :partial => "blogposts.html.erb", locals: {post: post} %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

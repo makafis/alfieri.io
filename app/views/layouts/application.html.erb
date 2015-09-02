@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Vincent Alfieri</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="wrapper white">
+        <div class="header">
+          <%= render partial: 'layouts/navbar'%>
+          <% if notice %>
+            <div class="alert alert-success"><%= notice %></div>
+          <% end %>
+          <div class="main-block">
+            <%= yield %>
+           </div>
+          <span class="totop" style="display: block;"><a href="#"><i class="fa fa-angle-up bg-grey"></i></a></span>
+          
+          <div id="footer">
+            
+          </div>
+        </div>  
+    </div>
+  </body>
+</html>
